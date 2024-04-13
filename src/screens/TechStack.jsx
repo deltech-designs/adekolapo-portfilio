@@ -1,3 +1,10 @@
+import Navbar from "../components/Navbar";
+
 export default function TechStack() {
-  return <div>TechStack Page</div>;
+  return (
+    <div>
+      <Navbar />
+      TechStack Page
+    </div>
+  );
 }

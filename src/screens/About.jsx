@@ -1,3 +1,10 @@
-export default function Abbout() {
-  return <div>About Page</div>;
+import Navbar from "../components/Navbar";
+
+export default function About() {
+  return (
+    <div>
+      <Navbar />
+      About Page
+    </div>
+  );
 }
