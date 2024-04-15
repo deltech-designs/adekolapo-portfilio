@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 
-export default function Projects() {
+export default function Projects({ isDarkMode, toggleColorMode }) {
   return (
     <div>
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} toggleColorMode={toggleColorMode} />
       Projects Page
     </div>
   );

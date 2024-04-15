@@ -32,6 +32,8 @@ export default {
         black: "#000000",
         magenta: "#E70FAA",
         cyan: "#00C0FD",
+        darkblue: "#42446E",
+        darkgray: "#666666",
       },
     },
   },

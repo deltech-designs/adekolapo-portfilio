@@ -1,8 +1,9 @@
 import Navbar from "../components/Navbar";
-export default function Contact() {
+
+export default function Contact({ isDarkMode, toggleColorMode }) {
   return (
     <div>
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} toggleColorMode={toggleColorMode} />
       Contact Page
     </div>
   );
