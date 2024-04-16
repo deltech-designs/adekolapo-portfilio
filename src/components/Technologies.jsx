@@ -53,7 +53,7 @@ export default function TechStack() {
       title: "Express js",
     },
     {
-      img: "./assets/icon-mongodb.svg",
+      img: "./assets/mongodb_original_logo_icon_146424.svg",
       title: "Mongodb",
     },
     {
@@ -63,7 +63,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="md:container mx-auto">
+    <div className="">
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-12 gap-8 place-content-center place-items-center">
         {language.map((item) => (
           <Tech key={item.title} item={item} />

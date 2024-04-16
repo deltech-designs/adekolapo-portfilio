@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import TechStack from "../components/Technologies";
 import Project from "../components/Project";
+import Footer from "../components/Footer";
 
 export default function Home({ isDarkMode, toggleColorMode }) {
   return (
@@ -39,7 +40,7 @@ export default function Home({ isDarkMode, toggleColorMode }) {
             Technologies I’ve been working with recently
           </p>
         </div>
-        <div>
+        <div className="md:container mx-auto">
           <TechStack />
         </div>
       </div>
@@ -53,8 +54,11 @@ export default function Home({ isDarkMode, toggleColorMode }) {
             Things I’ve built so far
           </p>
         </div>
-        <div>
+        <div className="md:container mx-auto">
           <Project />
+        </div>
+        <div className="md:container mx-auto">
+          <Footer />
         </div>
       </div>
     </div>

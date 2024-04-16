@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     container: {
       padding: "5rem",
@@ -34,8 +35,10 @@ export default {
         cyan: "#00C0FD",
         darkblue: "#42446E",
         darkgray: "#666666",
+        solidblue: "#42446E",
       },
     },
   },
+
   plugins: [],
 };
