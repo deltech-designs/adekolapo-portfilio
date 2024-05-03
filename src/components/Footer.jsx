@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:flex-col lg:flex-row items-start md:items-center justify-around gap-4 md:gap-12 ">
           <div className="">
-            <p>+91 12345 09876</p>
+            <p>+234 8089471575</p>
           </div>
           <div>
             <p>adekolaadekolapo@gmail.com</p>

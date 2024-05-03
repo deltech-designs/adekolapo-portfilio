@@ -36,6 +36,8 @@ export default {
         darkblue: "#42446E",
         darkgray: "#666666",
         solidblue: "#42446E",
+        lightsuccess: "#D7FFE0",
+        success: "#018C0F",
       },
     },
   },
