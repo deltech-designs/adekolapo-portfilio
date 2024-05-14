@@ -1,62 +1,31 @@
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { IoIosLink } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 export default function Projects() {
   const projects = [
     {
-      img: "./assets/gover.jpg",
-      title: "Gover Resturant",
-      desc: "I spearheaded Gover's website development, creating a mobile-responsive interface with HTML5, Sass, and JavaScript, prioritizing user experience through intuitive design and seamless navigation",
-      stack: "HTML5, Sass(SCSS), and JavaScript",
-      live: "http://gover-i93t.vercel.app/",
-      github: "https://github.com/deltech-designs/gover.git",
+      id: 1,
+      img: "./assets/ecommerce.jpg",
+      title: "Funiro Furniture",
+      github: "https://github.com/deltech-designs/furniture-website.git",
+      live: "https://kola-funiro.vercel.app/",
     },
     {
+      id: 1,
       img: "./assets/todo_app.png",
-      title: "Todo",
-      desc: "This project aims to develop a simple yet functional Todo application using React.js for the frontend and Tailwind CSS for styling. The Todo app will allow users to add, remove, and mark tasks as completed. ",
-      stack: "React.js, Tailwindcss",
-      live: "https://todo-list-phi-pink.vercel.app/",
+      title: "Todo App",
       github: "https://github.com/deltech-designs/todo-list.git",
-    },
-    {
-      img: "./assets/gover.jpg",
-      title: "Gover Resturant",
-      desc: "I spearheaded Gover's website development, creating a mobile-responsive interface with HTML5, Sass, and JavaScript, prioritizing user experience through intuitive design and seamless navigation",
-      stack: "HTML5, Sass(SCSS), and JavaScript",
-      live: "https://gover-i93t.vercel.app/",
-      github: "https://github.com/deltech-designs/adekolapo-portfilio.git",
-    },
-    {
-      img: "./assets/gover.jpg",
-      title: "Gover Resturant",
-      desc: "I spearheaded Gover's website development, creating a mobile-responsive interface with HTML5, Sass, and JavaScript, prioritizing user experience through intuitive design and seamless navigation",
-      stack: "HTML5, Sass(SCSS), and JavaScript",
-      live: "https://gover-i93t.vercel.app/",
-      github: "https://github.com/deltech-designs/adekolapo-portfilio.git",
-    },
-    {
-      img: "./assets/gover.jpg",
-      title: "Gover Resturant",
-      desc: "I spearheaded Gover's website development, creating a mobile-responsive interface with HTML5, Sass, and JavaScript, prioritizing user experience through intuitive design and seamless navigation",
-      stack: "HTML5, Sass(SCSS), and JavaScript",
-      live: "https://gover-i93t.vercel.app/",
-      github: "https://github.com/deltech-designs/adekolapo-portfilio.git",
-    },
-    {
-      img: "./assets/gover.jpg",
-      title: "Gover Resturant",
-      desc: "I spearheaded Gover's website development, creating a mobile-responsive interface with HTML5, Sass, and JavaScript, prioritizing user experience through intuitive design and seamless navigation",
-      stack: "HTML5, Sass(SCSS), and JavaScript",
-      live: "https://gover-i93t.vercel.app/",
-      github: "https://github.com/deltech-designs/adekolapo-portfilio.git",
+      live: "https://todo-list-phi-pink.vercel.app/",
     },
   ];
   return (
-    <div className="">
-      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 lg:gap-4  place-content-center place-items-center">
+    <div className="p-3">
+      <div className="grid grid-col-1 md:grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 lg:gap-10 justify-between place-content-center place-items-center">
         {projects.map((project) => (
-          <Card project={project} />
+          <Card project={project} key={project.id} />
         ))}
       </div>
     </div>
@@ -65,30 +34,31 @@ export default function Projects() {
 
 function Card({ project }) {
   return (
-    <div className="w-[373px] h-[560px] bg-white shadow-lg rounded-lg mt-4">
-      <img src={project.img} className="w-full" alt="" />
-      <div className="p-3">
-        <h1 className="text-36 font-semibold mb-3">{project.title}</h1>
-        <p className="text-">{project.desc}</p>
-
-        <p className="my-2">
-          <span className="font-semibold">Tech Stack:</span> {project.stack}
-        </p>
-        <div className="flex items-center justify-between mt-4">
-          <div className="flex items-center gap-2">
-            <IoIosLink size={20} />
-            <a href={project.live} className="underline">
-              Live Preview{" "}
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <FaGithub size={20} />
-            <a href={project.github} className="underline">
-              Veiw Code{" "}
-            </a>
+    <div>
+      <motion.div whileHover={{ scale: 1.1 }}>
+        <div className="w-[400px] h-[301px] bg-[#2A2A2A]  rounded-lg mt-4">
+          <img
+            src={project.img}
+            className="w-full rounded-tl-lg rounded-tr-lg object-fill object-center"
+            alt={project.title}
+          />
+          <div className="p-2 flex items-center justify-between">
+            <div>
+              <Link className="text-gray" to={project.live}>
+                CLICK HERE TO VISIT
+              </Link>
+              <h1 className="text-24 font-bold mb-3 uppercase text-white">
+                {project.title}
+              </h1>
+            </div>
+            <div>
+              <Link className="text-white" to={project.github}>
+                <MdOutlineArrowOutward size={30} />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

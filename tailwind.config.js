@@ -4,7 +4,7 @@ export default {
   darkMode: "class",
   theme: {
     container: {
-      padding: "5rem",
+      padding: "10rem",
     },
 
     mdContainer: {
@@ -31,10 +31,11 @@ export default {
       colors: {
         white: "#ffffff",
         black: "#000000",
-        magenta: "#E70FAA",
-        cyan: "#00C0FD",
+        primaryColor: "#222222",
+        purple: "#8000FF",
+        pitch: "#FF8660",
         darkblue: "#42446E",
-        darkgray: "#666666",
+        gray: "#C5C5C5",
         solidblue: "#42446E",
         lightsuccess: "#D7FFE0",
         success: "#018C0F",

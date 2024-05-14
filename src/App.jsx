@@ -26,12 +26,6 @@ function App() {
     <>
       <div className={isDarkMode ? "dark" : ""}>
         <div>
-          {/* <ColorModeIcon
-            isDarkMode={isDarkMode}
-            toggleColorMode={toggleColorMode}
-          /> */}
-          {/* <Navbar isDarkMode={isDarkMode} toggleColorMode={toggleColorMode} /> */}
-
           <Routes>
             <Route
               path="/"

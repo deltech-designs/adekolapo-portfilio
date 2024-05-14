@@ -1,13 +1,7 @@
+import { motion } from "framer-motion";
+
 export default function TechStack() {
   const language = [
-    // {
-    //   img: "./assets/Group 9.png",
-    //   title: "HTML",
-    // },
-    // {
-    //   img: "./assets/Group 10.png",
-    //   title: "CSS",
-    // },
     {
       img: "./assets/javscript.svg",
       title: "JavaScript",
@@ -40,10 +34,7 @@ export default function TechStack() {
       img: "./assets/icon-git.svg",
       title: "Git",
     },
-    // {
-    //   img: "./assets/akar-icons_github-fill.svg",
-    //   title: "Github",
-    // },
+
     {
       img: "./assets/icon-nodejs.svg",
       title: "Node js",
@@ -64,7 +55,7 @@ export default function TechStack() {
 
   return (
     <div className="">
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-12 gap-8 place-content-center place-items-center">
+      <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6 mt-12 gap-8 place-content-center place-items-center">
         {language.map((item) => (
           <Tech key={item.title} item={item} />
         ))}
@@ -75,11 +66,15 @@ export default function TechStack() {
 
 function Tech({ item }) {
   return (
-    <div className="flex text-center justify-center items-center">
-      <div key={item.title} className="">
-        <img src={item.img} className="w-16" alt={item.title} />
-        <h3 className="mt-6">{item.title}</h3>
-      </div>
+    <div>
+      <motion.div whileHover={{ scale: 1.1 }}>
+        <div className="flex text-center justify-center items-center">
+          <div key={item.title} className="">
+            <img src={item.img} className="w-16" alt={item.title} />
+            <h3 className="mt-6">{item.title}</h3>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

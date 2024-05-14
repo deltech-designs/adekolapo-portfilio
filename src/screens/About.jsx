@@ -4,85 +4,38 @@ import { HiOutlineBuildingOffice } from "react-icons/hi2";
 import { CiLocationOn } from "react-icons/ci";
 
 export default function About({ isDarkMode, toggleColorMode }) {
-  const workExperience = [
+  const experiences = [
     {
-      title: "Frontend Development Intern",
-      flexibility: "Internship",
-      company: "Cephas ICT Hub",
-      location: "Ogbomoso",
+      id: 1,
+      title: "Frontend Developer Intern at Cephas ICT Hub",
+      description:
+        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
       date: "Dec 2021 - Present ",
     },
     {
-      title: "Creative Designer",
-      flexibility: "full-time",
-      company: "Okay Visual Creations",
+      id: 2,
+      title: "Creative Designer at Okay VC",
+      description:
+        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
       location: "Ogbomoso",
       date: "Dec 2020 - June 2021 ",
     },
     {
-      title: "Frontend Development Student",
-      flexibility: "full-time",
-      company: "Ennovate Lab",
+      id: 3,
+      title: "Frontend Developer Student at Ennovate Lab",
+      description:
+        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
       location: "Ogbomoso",
       date: "Aug 2019 - Oct 2019",
     },
   ];
 
-  const education = [
-    {
-      title: "B.Tech in Information Systems",
-      flexibility: "full-time",
-      company: "Ladoke Akintola University of Technology",
-      location: "Ogbomoso",
-      date: "Aug 2022 - Present ",
-    },
-    {
-      title: "West African Examination Council",
-      flexibility: "full-time",
-      company: "Alafia-Oluwa Baptist College",
-      location: "Tewure",
-      date: "Sept 2015 - July 2019 ",
-    },
-  ];
-
   return (
     <div>
-      <Navbar isDarkMode={isDarkMode} toggleColorMode={toggleColorMode} />
-      <div className="md:container mx-auto">
-        <div className="mt-5 md:mt-20 lg:w-[50%] p-4">
-          <div className="text-36 md:text-48 mb-3 text-darkblue">
-            <h1 className="font-bold">About Me</h1>
-            <p className="text-16 md:text-20">
-              I'm Adekola Adekolapo, a skilled frontend web developer, adeptly
-              navigates the realms of HTML, CSS, and JavaScript. His expertise
-              extends to React, Tailwind CSS, and Sass (SCSS), ensuring seamless
-              integration of captivating designs with efficient functionality.
-              Proficient in Redux, he crafts robust and scalable web solutions
-              with finesse.
-            </p>
-          </div>
-          <div className="my-8">
-            <h1 className="font-bold text-36 md:text-48 mb-3 text-darkblue my-8">
-              Work Experience
-            </h1>
-            <div className="my-10">
-              {workExperience.map((exp) => (
-                <Experience key={exp.title} experience={exp} />
-              ))}
-            </div>
-          </div>
-          <div className="my-8">
-            <h1 className="font-bold text-36 md:text-48 mb-3 text-darkblue my-8">
-              Education
-            </h1>
-            <div className="my-10">
-              {education.map((exp) => (
-                <Experience key={exp.title} experience={exp} />
-              ))}
-            </div>
-          </div>
-          <div>{/* <Footer /> */}</div>
-        </div>
+      <div className="my-7">
+        {experiences.map((experience) => (
+          <Experience experience={experience} key={experience.id} />
+        ))}
       </div>
     </div>
   );
@@ -90,31 +43,23 @@ export default function About({ isDarkMode, toggleColorMode }) {
 
 function Experience({ experience }) {
   return (
-    <div className="mb-6">
-      <div className="flex justify-between items-center my-2">
-        <h3 className="text-18 lg:text-24">{experience.title}</h3>
-        <h3 className="rounded-full bg-lightsuccess text-success w-20 lg:w-32 text-center p-2 text-[9px]">
-          {experience.flexibility}
+    <div className="mb-8 text-white">
+      <div className="flex justify-between items-center text-left my-2 text-white gap-24">
+        <h3 className="text-18 lg:text-[21.74px] font-bold">
+          {experience.title}
+        </h3>
+        <h3 className="text-left text-[14.49px] text-[#8491A0]">
+          {experience.date}
         </h3>
       </div>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-6 text-[9px] md:text-12">
-          <div className="flex items-center gap-2 ">
-            <HiOutlineBuildingOffice />
-            <h3>{experience.company}</h3>
-          </div>
-          <div className="flex items-center gap-2 text-[9px] md:text-12">
-            <CiLocationOn />
-            <h3>{experience.location}</h3>
-          </div>
+      <p className="my-2 text-justify text-12">{experience.description}</p>
+      {/* <div className="flex justify-between items-center gap-36 text-white">
+          <h3 className="text-18 lg:text-[21.74px] font-bold">
+            {experience.title}
+          </h3>
+          <h3>{experience.date}</h3>
         </div>
-        <div className="text-right text-[9px] md:text-12 flex items-center gap-2">
-          <CgCalendarDates />
-          <span>{experience.date}</span>
-        </div>
-      </div>
-      <br />
-      <hr />
+        <p className="">{experience.description}</p> */}
     </div>
   );
 }
