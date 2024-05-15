@@ -36,7 +36,7 @@ function Card({ project }) {
   return (
     <div>
       <motion.div whileHover={{ scale: 1.1 }}>
-        <div className="w-[400px] h-[301px] bg-[#2A2A2A]  rounded-lg mt-4">
+        <div className="w-full lg:w-[400px] h-[301px] bg-[#2A2A2A]  rounded-lg mt-4">
           <img
             src={project.img}
             className="w-full rounded-tl-lg rounded-tr-lg object-fill object-center"

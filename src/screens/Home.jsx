@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useTypewriter from "react-typewriter-hook";
 import Navbar from "../components/Navbar";
@@ -96,7 +97,7 @@ export default function Home() {
 
       {/* Technologies */}
       <div className="md:container mx-auto">
-        <div className="flex flex-col justify-center items-center mt-10">
+        <div className="flex flex-col justify-center items-center mt-10 p-6 lg:p-2">
           <div className="">
             <h1 className="text-24 font-semibold text-gray my-2">
               EXPERIENCE WITH
@@ -108,7 +109,7 @@ export default function Home() {
 
       {/* Projects */}
       <div className="md:container mx-auto">
-        <div className="flex flex-col justify-center items-center mt-10">
+        <div className="flex flex-col justify-center items-center mt-10 p-2">
           <h1
             className="text-36  font-bold bg-gradient-to-br from-[#FF8660] via-[#FF8660] to-[#D5491D] text-transparent
       bg-clip-text uppercase my"
@@ -120,15 +121,18 @@ export default function Home() {
       </div>
 
       {/* Expreience */}
-      <div className="md:container mx-auto ">
-        <div>
-          <div className="flex flex-col justify-center items-center my-32">
-            <h1
-              className="text-36  font-bold bg-gradient-to-br from-[#5BADFF] via-[#1373D1] to-[#1373D1] text-transparent
+      <div className="md:container mx-auto">
+        <div className="flex flex-col justify-center items-center  my-24 p-2">
+          <h1
+            className="text-36  font-bold bg-gradient-to-br from-[#5BADFF] via-[#1373D1] to-[#1373D1] text-transparent
       bg-clip-text uppercase my"
-            >
-              Experience
-            </h1>
+          >
+            Experience
+          </h1>
+          <div
+            className="
+          "
+          >
             <About />
           </div>
         </div>
@@ -138,7 +142,7 @@ export default function Home() {
         <div className="md:container mx-auto">
           <div className="py-14">
             <h1 className="text-[23.53px] font-bold my-4">Contact</h1>
-            <p className="w-4/6 leading">
+            <p className="w-full md:w-4/6 leading">
               Seasoned Full Stack Software Engineer with over 8 years of
               hands-on experience in designing and implementing robust,
               scalable, and innovative web solutions. Adept at leveraging a
@@ -153,9 +157,15 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4">
-              <FaGithub size={20} />
-              <AiFillTwitterCircle size={20} />
-              <FaLinkedin size={20} />
+              <Link to="https://github.com/deltech-designs">
+                <FaGithub size={20} />
+              </Link>
+              <Link to="">
+                <AiFillTwitterCircle size={20} />
+              </Link>
+              <Link to="https://www.linkedin.com/in/adekolapo-adekola-a13725214">
+                <FaLinkedin size={20} />
+              </Link>
             </div>
           </div>
         </div>
