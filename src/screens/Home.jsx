@@ -30,7 +30,7 @@ export default function Home() {
     <div className="bg-black h-auto">
       <Navbar />
       <div>
-        <div className="md:container mx-auto">
+        <div className="lg:container mx-auto">
           <div className="p-8 md:p-14 lg:p-24 flex justify-center items-center flex-col text-center text-white">
             <div>
               <motion.div
@@ -80,7 +80,7 @@ export default function Home() {
               </h1>
               <p className="text-center text-gray mt-8 w-full md:w-full lg:w-3/5">
                 I'm Adekola Adekolapo, a skilled frontend web developer, adeptly
-                navigates the realms of HTML, CSS, and JavaScript. His expertise
+                navigates the realms of HTML, CSS, and JavaScript. My expertise
                 extends to React, Tailwind CSS, and Sass (SCSS), ensuring
                 seamless integration of captivating designs with efficient
                 functionality. Proficient in Redux, he crafts robust and
@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Technologies */}
-      <div className="md:container mx-auto">
+      <div className="lg:container mx-auto">
         <div className="flex flex-col justify-center items-center mt-10 p-6 lg:p-2">
           <div className="">
             <h1 className="text-24 font-semibold text-gray my-2">
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div className="md:container mx-auto">
+      <div className="lg:container mx-auto">
         <div className="flex flex-col justify-center items-center mt-10 p-2">
           <h1
             className="text-36  font-bold bg-gradient-to-br from-[#FF8660] via-[#FF8660] to-[#D5491D] text-transparent
@@ -121,7 +121,7 @@ export default function Home() {
       </div>
 
       {/* Expreience */}
-      <div className="md:container mx-auto">
+      <div className="lg:container mx-auto">
         <div className="flex flex-col justify-center items-center  my-24 p-2">
           <h1
             className="text-36  font-bold bg-gradient-to-br from-[#5BADFF] via-[#1373D1] to-[#1373D1] text-transparent
@@ -140,14 +140,13 @@ export default function Home() {
 
       <div className="bg-[#191919] text-white h-1/2">
         <div className="md:container mx-auto">
-          <div className="py-14">
+          <div className="py-14 w-full lg:w-8/12">
             <h1 className="text-[23.53px] font-bold my-4">Contact</h1>
-            <p className="w-full md:w-4/6 leading">
-              Seasoned Full Stack Software Engineer with over 8 years of
-              hands-on experience in designing and implementing robust,
-              scalable, and innovative web solutions. Adept at leveraging a
-              comprehensive skill set encompassing front-end and back-end
-              technologies{" "}
+            <p className="w-full lg:w-4/6 Full Stack Software Engineerleading">
+              Seasoned Frontend Developer with over 3 years of hands-on
+              experience in designing and implementing robust, scalable, and
+              innovative web solutions. Adept at leveraging a comprehensive
+              skill set encompassing front-end and back-end technologies{" "}
             </p>
 
             <div>

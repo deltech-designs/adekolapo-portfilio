@@ -40,7 +40,7 @@ export default function TechStack() {
       title: "Node js",
     },
     {
-      img: "./assets/icons8-express-js.svg",
+      img: "./assets/icons8-express-js (1).svg",
       title: "Express js",
     },
     {

@@ -19,7 +19,7 @@ function Navbar({ isDarkMode, toggleColorMode }) {
     <div>
       {/* Navigation bar  */}
       <nav className="bg-primaryColor shadow-sm">
-        <div className="md:container mx-auto ">
+        <div className="lg:container mx-auto ">
           <div className="p-4 md:p-4 lg:p-8 flex justify-between items-center">
             {/* Logo on Large Screen  */}
             <div className="flex items-center gap-2">
