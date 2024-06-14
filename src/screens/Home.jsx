@@ -140,9 +140,9 @@ export default function Home() {
 
       <div className="bg-[#191919] text-white h-1/2">
         <div className="md:container mx-auto">
-          <div className="py-14 w-full lg:w-8/12">
+          <div className="py-14 w-full lg:w-8/12 p-3">
             <h1 className="text-[23.53px] font-bold my-4">Contact</h1>
-            <p className="w-full lg:w-4/6 Full Stack Software Engineerleading">
+            <p className="w-full lg:w-4/6leading ">
               Seasoned Frontend Developer with over 3 years of hands-on
               experience in designing and implementing robust, scalable, and
               innovative web solutions. Adept at leveraging a comprehensive
