@@ -152,7 +152,7 @@ export default function Home() {
                 <FaGithub size={20} />
               </a>
               <a
-                href="https://twitter.com/your-profile"
+                href="https://x.com/darkTechBro?t=-8hEfksEZO1faxtYrumOMQ&s=09"
                 target="_blank"
                 rel="noopener noreferrer"
               >
