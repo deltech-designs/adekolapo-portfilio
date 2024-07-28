@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import useTypewriter from "react-typewriter-hook";
 import Navbar from "../components/Navbar";
 import TechStack from "../components/Technologies";
 import Project from "../components/Project";
 import About from "./About";
-
 import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   const [magicName, setMagicName] = useState("make Design");
   const name = useTypewriter(magicName);
 
@@ -87,9 +88,17 @@ export default function Home() {
                 scalable web solutions with finesse.
               </p>
 
-              <button className="font-semibold bg-black border border-white px-10 py-4 rounded-full mt-10 hover:bg-white hover:text-black transition-all duration-100">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                onClick={() =>
+                  navigate(
+                    "https://drive.google.com/file/d/1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs/view"
+                  )
+                }
+                className="font-semibold bg-black border border-white px-10 py-4 rounded-full mt-10 hover:bg-white hover:text-black transition-all duration-100"
+              >
                 Resume
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
