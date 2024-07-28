@@ -78,14 +78,14 @@ function Navbar({ isDarkMode, toggleColorMode }) {
                       <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <Link to="/projects">Projects</Link>
+                      <Link to="">Projects</Link>
                     </li>
 
                     <li>
-                      <Link to="/tech-stack">Technologies</Link>
+                      <Link to="">Technologies</Link>
                     </li>
                     <li>
-                      <Link to="/contact">Contact</Link>
+                      <Link to="">Contact</Link>
                     </li>
                   </ul>
                   {/* <div className="flex items-center gap-3 md:gap-3 lg:gap-8">

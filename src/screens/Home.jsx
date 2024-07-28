@@ -28,7 +28,8 @@ export default function Home() {
   }, []);
   const resumeLink =
     "https://drive.google.com/uc?export=download&id=1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs";
-  return (
+  //drive.google.com/file/d/1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs/view?usp=drive_link
+  https: return (
     <div className="bg-black h-auto">
       <Navbar />
       <div>
