@@ -26,7 +26,8 @@ export default function Home() {
     }, 2000);
     return () => clearInterval(intervalId);
   }, []);
-
+  const resumeLink =
+    "https://drive.google.com/uc?export=download&id=1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs";
   return (
     <div className="bg-black h-auto">
       <Navbar />
@@ -92,7 +93,7 @@ export default function Home() {
                 whileHover={{ scale: 1.1 }}
                 onClick={() =>
                   navigate(
-                    "https://drive.google.com/file/d/1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs/view?usp=drive_link"
+                    "https://drive.google.com/uc?export=download&id=1F9MNc8Q0rKOzfxlU9aZpW6g9SPeGZWAs"
                   )
                 }
                 className="font-semibold bg-black border border-white px-10 py-4 rounded-full mt-10 hover:bg-white hover:text-black transition-all duration-100"
